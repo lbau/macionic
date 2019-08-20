@@ -18,6 +18,7 @@ pipeline {
          //sh "${INSNPM}"
          sh "echo sudo su"
          sh "echo ${PS}"
+         sh "echo npm install"
          //sh 'nvm.sh list'
          
       }
