@@ -2,7 +2,7 @@ pipeline {
    agent any
       environment {
         
-         PATH='/usr/local/bin:/usr/bin:/bin'
+         PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/.nvm'
          //PATH='/usr/local/bin:/usr/bin:/bin/ANDROID_HOME'
          //PATH='/Users/Shared/Jenkins/ANDROID_HOME'
       }
@@ -11,7 +11,7 @@ pipeline {
       steps {
         //sh 'npm install'
         echo "Prueba npm"
-         sh 'nvm use 10.9.0'
+         sh 'nvm-exec use 10.9.0'
          
       }
    }
