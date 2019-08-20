@@ -9,8 +9,8 @@ pipeline {
    stages {
       stage('NPM Setup') {
       steps {
-        sh 'npm install'
-        //echo "Prueba npm"
+        //sh 'npm install'
+        echo "Prueba npm"
       }
    }
 
