@@ -16,8 +16,8 @@ pipeline {
 
    stage('IOS Build') {
    steps {
-      //sh 'ionic cordova build ios --release'
-     sh 'node --max-old-space-size=8192 ./node_modules/@ionic/app-scripts/bin/ionic-app-scripts.js build --prod && cordova build ios'
+      sh 'ionic cordova build ios --release'
+     //sh 'node --max-old-space-size=8192 ./node_modules/@ionic/app-scripts/bin/ionic-app-scripts.js build --prod && cordova build ios'
      } 
   }
 
