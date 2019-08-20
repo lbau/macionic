@@ -42,7 +42,7 @@ pipeline {
    stage('Android Build') {
    steps {
 
-      sh 'ionic cordova build android --release'
+      bat 'ionic cordova build android --release'
      //sh 'node --max-old-space-size=8192 ./node_modules/@ionic/app-scripts/bin/ionic-app-scripts.js build --prod && cordova build android --release'
    }
   }
