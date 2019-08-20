@@ -16,7 +16,7 @@ pipeline {
       stage('NPM Setup') {
       steps {
          echo "node --version"
-         node --version
+         echo "nvm list"
          nvm list
         //sh 'npm install'
         //echo "Prueba npm"
