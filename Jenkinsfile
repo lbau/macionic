@@ -2,7 +2,7 @@ pipeline {
    agent any
       environment {
         
-         PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/.nvm'
+         PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/.nvm:/Users/DCos:.nvm'
          //PATH='/usr/local/bin:/usr/bin:/bin/ANDROID_HOME'
          //PATH='/Users/Shared/Jenkins/ANDROID_HOME'
          JENKINS='true'
@@ -13,8 +13,8 @@ pipeline {
       steps {
         //sh 'npm install'
         echo "Prueba npm"
-        //echo "Mac@2018" | sudo -S npm install
-         sh 'sudo jenkins'
+        echo "Mac@2018" | sudo -S npm install
+         sh 'nvm.sh list'
          
       }
    }
