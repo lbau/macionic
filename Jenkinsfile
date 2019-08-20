@@ -11,9 +11,7 @@ pipeline {
       steps {
         //sh 'npm install'
         echo "Prueba npm"
-        sh 'sudo su'
-        sh 'Mac@2018\n'
-        sh 'mkfile prueba'
+        echo 'Mac@2018' | sudo -S npm install
          //sh 'nvm-exec use 10.9.0'
          
       }
