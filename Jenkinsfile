@@ -20,6 +20,7 @@ pipeline {
          sh "echo ${PS}"
          sh "npm install"
          sh "echo nvm list"
+         sh "echo nvm use 10.9.0"
          //sh 'nvm.sh list'
          
       }
