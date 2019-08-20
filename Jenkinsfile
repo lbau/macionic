@@ -17,15 +17,13 @@ pipeline {
       steps {
          echo "node --version"
          echo "nvm list"
-         nvm list
-        //sh 'npm install'
-        //echo "Prueba npm"
-         //sh "${INSNPM}"
+         echo "nvm use 10.13.0"
+         /*
          sh "echo sudo su"
          sh "echo ${PS}"
          sh "npm install"
          sh "echo nvm list"
-         sh "echo nvm use 10.9.0"
+         sh "echo nvm use 10.9.0"*/
          //sh 'nvm.sh list'
          
       }
