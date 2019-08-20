@@ -19,7 +19,7 @@ pipeline {
          sh "echo sudo su"
          sh "echo ${PS}"
          sh "npm install"
-         sh "nvm list"
+         sh "echo nvm list"
          //sh 'nvm.sh list'
          
       }
