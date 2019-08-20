@@ -13,8 +13,8 @@ pipeline {
       steps {
         //sh 'npm install'
         //echo "Prueba npm"
-        echo "Mac" |"x"| "2018" | sudo -S npm install
-         sh 'nvm.sh list'
+         echo "Mac2018" | sudo -S npm install
+         //sh 'nvm.sh list'
          
       }
    }
