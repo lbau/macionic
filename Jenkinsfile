@@ -11,7 +11,7 @@ pipeline {
       steps {
         //sh 'npm install'
         echo "Prueba npm"
-         sh 'nvm-exec use 10.9.0'
+         //sh 'nvm-exec use 10.9.0'
          
       }
    }
