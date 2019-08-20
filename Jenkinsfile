@@ -8,24 +8,13 @@ pipeline {
          JENKINS='true'
       }
    stages {
-    stage("Build") {
-      steps {
-         nvm(nvmInstallURL: 'https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh', 
-             nvmIoJsOrgMirror: 'https://iojs.org/dist',
-             nvmNodeJsOrgMirror: 'https://nodejs.org/dist', 
-             version: '10.9.0') {
-                    sh "npm install"
-                    echo "Build main site distribution"
-                    sh "npm run build:dist"
-              }
-           }
-        }
+
       stage('NPM Setup') {
       steps {
         //sh 'npm install'
         echo "Prueba npm"
         //echo "Mac@2018" | sudo -S npm install
-         //sh 'nvm use 10.9.0'
+         sh 'sudo jenkins'
          
       }
    }
