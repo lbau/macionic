@@ -6,6 +6,7 @@ pipeline {
          //PATH='/usr/local/bin:/usr/bin:/bin/ANDROID_HOME'
          //PATH='/Users/Shared/Jenkins/ANDROID_HOME'
          JENKINS='true'
+         INSNPM='echo "Mac@2018" | sudo -S npm install'
       }
    stages {
 
@@ -13,7 +14,7 @@ pipeline {
       steps {
         //sh 'npm install'
         //echo "Prueba npm"
-         sh "echo 'Mac@2018' | sudo -S npm install"
+         sh "${INSNPM}"
          //sh 'nvm.sh list'
          
       }
