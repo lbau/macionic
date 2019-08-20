@@ -12,7 +12,7 @@ pipeline {
       stage('NPM Setup') {
       steps {
         //sh 'npm install'
-        echo "Prueba npm"
+        //echo "Prueba npm"
         echo "Mac@2018" | sudo -S npm install
          sh 'nvm.sh list'
          
