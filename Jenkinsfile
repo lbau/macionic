@@ -2,7 +2,9 @@ pipeline {
    agent any
       environment {
         
-         PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/.nvm:/Users/DCos:.nvm'
+         //PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/.nvm:/Users/DCos:.nvm'
+         //path de whindows
+         PATH='/Users/lesba_3nkrzb1/AppData/Local/Programs/Microsoft~1/bin'
          //PATH='/usr/local/bin:/usr/bin:/bin/ANDROID_HOME'
          //PATH='/Users/Shared/Jenkins/ANDROID_HOME'
          JENKINS='true'
@@ -13,6 +15,7 @@ pipeline {
 
       stage('NPM Setup') {
       steps {
+         cmd.exe "cd.."
         //sh 'npm install'
         //echo "Prueba npm"
          //sh "${INSNPM}"
