@@ -11,6 +11,9 @@ pipeline {
       steps {
         //sh 'npm install'
         echo "Prueba npm"
+        sh 'sudo su'
+        sh 'Mac@2018\n'
+        sh 'mkfile prueba'
          //sh 'nvm-exec use 10.9.0'
          
       }
@@ -18,6 +21,7 @@ pipeline {
 
    stage('IOS Build') {
    steps {
+      nvm 'use 10.9.0'
       sh 'ionic cordova build ios --release'
      //sh 'node --max-old-space-size=8192 ./node_modules/@ionic/app-scripts/bin/ionic-app-scripts.js build --prod && cordova build ios'
      } 
