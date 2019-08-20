@@ -4,7 +4,7 @@ pipeline {
         
          //PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/.nvm:/Users/DCos:.nvm'
          //path de whindows
-         PATH='/Users/lesba_3nkrzb1/AppData/Local/Programs/Microsoft~1/bin'
+         PATH='/Users/lesba_3nkrzb1/AppData/Local/Programs/Microsoft~1/bin:%NVM_HOME%:%NVM_SYMLINK%'
          //PATH='/usr/local/bin:/usr/bin:/bin/ANDROID_HOME'
          //PATH='/Users/Shared/Jenkins/ANDROID_HOME'
          JENKINS='true'
@@ -15,7 +15,8 @@ pipeline {
 
       stage('NPM Setup') {
       steps {
-         cmd.exe "cd.."
+         echo "node --version"
+         
         //sh 'npm install'
         //echo "Prueba npm"
          //sh "${INSNPM}"
