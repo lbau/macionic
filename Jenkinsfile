@@ -2,7 +2,7 @@ pipeline {
    agent any
       environment {
          // path de Mac
-         PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/.nvm:/Users/DCos:.nvm'
+         PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/.nvm:/Users/DCos:.nvm:/var/lib/jenkins/.nvm'
          //path de whindows
          //PATH='/Users/lesba_3nkrzb1/AppData/Local/Programs/Microsoft~1/bin:%NVM_HOME%:%NVM_SYMLINK%:%windir%/system32:%HOMEDRIVE%:%HOMEPATH%'
          //PATH='/usr/local/bin:/usr/bin:/bin/ANDROID_HOME'
@@ -33,6 +33,7 @@ pipeline {
    stage('IOS Build') {
    steps {
       //nvm 'use 10.9.0'
+      sh 'nvm use 10.9.0'
       sh 'ionic cordova build ios --release'
       echo "test ios"
      //sh 'node --max-old-space-size=8192 ./node_modules/@ionic/app-scripts/bin/ionic-app-scripts.js build --prod && cordova build ios'
