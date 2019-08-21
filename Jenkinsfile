@@ -33,7 +33,7 @@ pipeline {
    stage('IOS Build') {
    steps {
       //nvm 'use 10.9.0'
-      //sh 'ionic cordova build ios --release'
+      sh 'ionic cordova build ios --release'
       echo "test ios"
      //sh 'node --max-old-space-size=8192 ./node_modules/@ionic/app-scripts/bin/ionic-app-scripts.js build --prod && cordova build ios'
      } 
