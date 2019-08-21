@@ -18,12 +18,12 @@ pipeline {
          echo "node --version"
          echo "nvm list"
          echo "nvm use 10.13.0"
-         /*
+         
          sh "echo sudo su"
          sh "echo ${PS}"
          sh "npm install"
          sh "echo nvm list"
-         sh "echo nvm use 10.9.0"*/
+         sh "echo nvm use 10.9.0"
          //sh 'nvm.sh list'
          
       }
@@ -33,7 +33,7 @@ pipeline {
    stage('IOS Build') {
    steps {
       //nvm 'use 10.9.0'
-      sh 'nvm use 10.9.0'
+      sh 'nvm-wrapper use 10.9.0'
       sh 'ionic cordova build ios --release'
       echo "test ios"
      //sh 'node --max-old-space-size=8192 ./node_modules/@ionic/app-scripts/bin/ionic-app-scripts.js build --prod && cordova build ios'
