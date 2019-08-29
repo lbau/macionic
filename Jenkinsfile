@@ -23,7 +23,7 @@ pipeline {
              version: '10.9.0') {
                     sh "npm install"
                     echo "Build main site distribution"
-                    sh "npm run build:dist"
+                    //sh "npm run build:dist"
               }
            }
     }
@@ -39,7 +39,7 @@ pipeline {
         // sh "export > env.txt"
         // sh "NVM_DIR=$HOME/.nvm && source $NVM_DIR/nvm.sh --no-use && NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist nvm install v10.9.0 && nvm use v10.9.0 && export > env.txt"
      
-         sh "npm install"
+        // sh "npm install"
          sh "echo nvm list"
          sh "echo nvm use 10.9.0"
          //sh 'nvm.sh list'
