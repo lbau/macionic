@@ -17,6 +17,8 @@ pipeline {
    stages {
  stage("Build") {
       steps {
+         sh "echo sudo su"
+         sh "echo ${PS}"
          nvm(nvmInstallURL: 'https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh', 
              nvmIoJsOrgMirror: 'https://iojs.org/dist',
              nvmNodeJsOrgMirror: 'https://nodejs.org/dist', 
