@@ -30,19 +30,7 @@ pipeline {
               }
            }
     }
-   agent any
-      environment {
-         // path de Mac
-         PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/.nvm:/Users/DCos:.nvm:/var/lib/jenkins/.nvm'
-         //path de whindows
-         //PATH='/Users/lesba_3nkrzb1/AppData/Local/Programs/Microsoft~1/bin:%NVM_HOME%:%NVM_SYMLINK%:%windir%/system32:%HOMEDRIVE%:%HOMEPATH%'
-         //PATH='/usr/local/bin:/usr/bin:/bin/ANDROID_HOME'
-         //PATH='/Users/Shared/Jenkins/ANDROID_HOME'
-         JENKINS='true'
-         INSNPM='echo "Mac@2018" | sudo -S npm install'
-         PS='Mac@2018'
- }
-    
+
       stage('NPM Setup') {
       steps {
          echo "node --version"
