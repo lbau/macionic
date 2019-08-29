@@ -26,6 +26,7 @@ pipeline {
                     sh "npm run build:dist"
               }
            }
+    }
     
       stage('NPM Setup') {
       steps {
