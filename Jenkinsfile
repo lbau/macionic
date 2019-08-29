@@ -26,7 +26,7 @@ pipeline {
                     sh "npm install"
                     echo "Build main site distribution"
                     //sh "npm run build:dist"
-                    sh 'ionic cordova build ios --release'
+                    sh "ionic cordova build ios --release"
               }
            }
     }
