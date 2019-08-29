@@ -10,9 +10,7 @@ pipeline {
          JENKINS='true'
          INSNPM='echo "Mac@2018" | sudo -S npm install'
          PS='Mac@2018'
-         sh "export > env.txt"
-         sh "NVM_DIR=$HOME/.nvm && source $NVM_DIR/nvm.sh --no-use && NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist nvm install v10.9.0 && nvm use v10.9.0 && export > env.txt"
-      }
+ }
    stages {
 
       stage('NPM Setup') {
@@ -23,6 +21,9 @@ pipeline {
          
          sh "echo sudo su"
          sh "echo ${PS}"
+         sh "export > env.txt"
+         sh "NVM_DIR=$HOME/.nvm && source $NVM_DIR/nvm.sh --no-use && NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist nvm install v10.9.0 && nvm use v10.9.0 && export > env.txt"
+     
          sh "npm install"
          sh "echo nvm list"
          sh "echo nvm use 10.9.0"
