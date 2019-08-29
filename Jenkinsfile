@@ -11,8 +11,22 @@ pipeline {
          INSNPM='echo "Mac@2018" | sudo -S npm install'
          PS='Mac@2018'
  }
-   stages {
 
+   
+        
+   stages {
+ stage("Build") {
+      steps {
+         nvm(nvmInstallURL: 'https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh', 
+             nvmIoJsOrgMirror: 'https://iojs.org/dist',
+             nvmNodeJsOrgMirror: 'https://nodejs.org/dist', 
+             version: '10.9.0') {
+                    sh "npm install"
+                    echo "Build main site distribution"
+                    sh "npm run build:dist"
+              }
+           }
+    
       stage('NPM Setup') {
       steps {
          echo "node --version"
@@ -21,8 +35,8 @@ pipeline {
          
          sh "echo sudo su"
          sh "echo ${PS}"
-         sh "export > env.txt"
-         sh "NVM_DIR=$HOME/.nvm && source $NVM_DIR/nvm.sh --no-use && NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist nvm install v10.9.0 && nvm use v10.9.0 && export > env.txt"
+        // sh "export > env.txt"
+        // sh "NVM_DIR=$HOME/.nvm && source $NVM_DIR/nvm.sh --no-use && NVM_NODEJS_ORG_MIRROR=https://nodejs.org/dist nvm install v10.9.0 && nvm use v10.9.0 && export > env.txt"
      
          sh "npm install"
          sh "echo nvm list"
