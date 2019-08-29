@@ -30,7 +30,8 @@ pipeline {
               }
            }
     }
-            environment {
+   agent any
+      environment {
          // path de Mac
          PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/.nvm:/Users/DCos:.nvm:/var/lib/jenkins/.nvm'
          //path de whindows
