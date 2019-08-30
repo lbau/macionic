@@ -28,9 +28,12 @@ pipeline {
 
                         
                     sh "npm install ionic@4.0.6"
+             
+            sh "npm install -g cordova@8.0.0"
                     sh 'npm config get prefix'
-             sh './node_modules/ionic/bin/ionic ./node_modules/ionic/bin/cordova build android --release'
-            sh "./node_modules/ionic/bin/ionic ./node_modules/ionic/bin/cordova build ios --prod --release"
+            sh 'cd ./node_modules/ionic/bin/'
+             sh './node_modules/ionic/bin/ionic cordova build android --release'
+            sh "./node_modules/ionic/bin/ionic cordova build ios --prod --release"
                   //sh 'ionic cordova build ios --release'
       echo "test ios"
                     echo "Build main site distribution"
