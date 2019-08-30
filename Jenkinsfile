@@ -20,19 +20,20 @@ pipeline {
          sh "echo sudo su"
          sh "echo ${PS}"
          sh "echo nvm use 10.9.0"
-      /*   nvm(nvmInstallURL: 'https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh', 
+         nvm(nvmInstallURL: 'https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh', 
              nvmIoJsOrgMirror: 'https://iojs.org/dist',
              nvmNodeJsOrgMirror: 'https://nodejs.org/dist', 
              version: '10.9.0') {
                     sh "npm install"
+                    sh 'PATH'
                     echo "Build main site distribution"
                     //sh "npm run build:dist"
 
-              }*/
+              }
          }
     }
 
-      stage('NPM Setup') {
+ /*     stage('NPM Setup') {
       steps {
          echo "node --version"
          echo "nvm list"
@@ -49,7 +50,7 @@ pipeline {
          //sh 'nvm.sh list'
          
       }
-   }
+   }*/
       
 
    stage('IOS Build') {
