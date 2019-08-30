@@ -5,7 +5,7 @@ pipeline {
          //ANDROID_HOME='/Users/DCos/Library/Android/sdk'
          //PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/.nvm:/Users/DCos:.nvm:/var/lib/jenkins/.nvm:/Users/DCos/Library/Android/sdk'
          //path de whindows
-           PATH='/Users/DCos/Documents/Jenkins/:/Users/DCos/Documents/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/ionic/bin:/Users/Shared/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/cordova/bin'
+           PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/Documents/Jenkins/:/Users/DCos/Documents/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/ionic/bin:/Users/Shared/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/cordova/bin'
          //PATH='/Users/lesba_3nkrzb1/AppData/Local/Programs/Microsoft~1/bin:%NVM_HOME%:%NVM_SYMLINK%:%windir%/system32:%HOMEDRIVE%:%HOMEPATH%'
          //PATH='/usr/local/bin:/usr/bin:/bin/ANDROID_HOME'
          //PATH='/Users/Shared/Jenkins/ANDROID_HOME'
