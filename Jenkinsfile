@@ -28,7 +28,7 @@ pipeline {
                     sh "npm install"
 
                         
-                    sh "npm install ionic@4.0.6"
+                    sh "npm install -g ionic@4.0.6"
              
             sh "npm install -g cordova@8.0.0"
                     sh 'npm config get prefix'
