@@ -2,6 +2,7 @@ pipeline {
    agent any
       environment {
          // path de Mac
+         ANDROID_HOME='/Users/Dcos/Library/Android/sdk/android-sdk-macosx'
          PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/.nvm:/Users/DCos:.nvm:/var/lib/jenkins/.nvm:/Users/Dcos/Library/Android/sdk/android-sdk-macosx'
          //path de whindows
          //PATH='/Users/lesba_3nkrzb1/AppData/Local/Programs/Microsoft~1/bin:%NVM_HOME%:%NVM_SYMLINK%:%windir%/system32:%HOMEDRIVE%:%HOMEPATH%'
@@ -31,10 +32,10 @@ pipeline {
              
             sh "npm install -g cordova@8.0.0"
                     sh 'npm config get prefix'
-            sh 'cd ./node_modules/ionic/bin/'
+            //sh 'cd ./node_modules/ionic/bin/'
             sh "echo ${PATH}"
             sh 'export ANDROID_HOME=/Users/Dcos/Library/Android/sdk/android-sdk-macosx'
-            sh 'export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools'
+            sh 'export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools'
             sh "echo ${PATH}"
              sh './node_modules/ionic/bin/ionic cordova build android --release'
             //sh "./node_modules/ionic/bin/ionic cordova build ios --prod --release"
