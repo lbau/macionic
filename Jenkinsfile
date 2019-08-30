@@ -26,6 +26,8 @@ pipeline {
              version: '10.9.0') {
                     sh "npm install"
                     sh 'npm config get prefix'
+                  sh 'ionic cordova build ios --release'
+      echo "test ios"
                     echo "Build main site distribution"
                     //sh "npm run build:dist"
 
