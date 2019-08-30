@@ -84,7 +84,7 @@ pipeline {
      //sh 'node --max-old-space-size=8192 ./node_modules/@ionic/app-scripts/bin/ionic-app-scripts.js build --prod && cordova build ios'
      } 
   }
-
+/*
    stage('Android Build') {
    steps {
 
@@ -125,6 +125,6 @@ pipeline {
         echo "Publish Android API Action"
    }
   }
-
+*/
  }
 }
