@@ -2,7 +2,7 @@ pipeline {
    agent any
       environment {
          // path de Mac
-         ANDROID_HOME='/Users/Dcos/Library/Android/sdk'
+         ANDROID_HOME='/Users/Dcos/Library/Android/sdk/platform-tools'
          PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/.nvm:/Users/DCos:.nvm:/var/lib/jenkins/.nvm:/Users/Dcos/Library/Android/sdk/platform-tools'
          //path de whindows
          //PATH='/Users/lesba_3nkrzb1/AppData/Local/Programs/Microsoft~1/bin:%NVM_HOME%:%NVM_SYMLINK%:%windir%/system32:%HOMEDRIVE%:%HOMEPATH%'
