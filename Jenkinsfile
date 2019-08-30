@@ -25,7 +25,7 @@ pipeline {
              nvmNodeJsOrgMirror: 'https://nodejs.org/dist', 
              version: '10.9.0') {
                     sh "npm install"
-                    sh 'PATH'
+                    sh 'npm config get prefix'
                     echo "Build main site distribution"
                     //sh "npm run build:dist"
 
