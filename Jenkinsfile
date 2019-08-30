@@ -32,6 +32,8 @@ pipeline {
             sh "npm install -g cordova@8.0.0"
                     sh 'npm config get prefix'
             sh 'cd ./node_modules/ionic/bin/'
+            sh 'export ANDROID_HOME=/Users/Dcos/Library/Android/sdk/android-sdk-macosx'
+            sh 'export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools'
              sh './node_modules/ionic/bin/ionic cordova build android --release'
             sh "./node_modules/ionic/bin/ionic cordova build ios --prod --release"
                   //sh 'ionic cordova build ios --release'
