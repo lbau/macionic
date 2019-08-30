@@ -27,7 +27,7 @@ pipeline {
                     sh "npm install"
                     //sh 'npm config get prefix'
                         
-                    sh "export > '/usr/local/bin:/usr/bin:/bin:/Users/DCos/.nvm:/Users/DCos:.nvm:/var/lib/jenkins/.nvm'"
+                    sh "npm install ionic@4.0.6"
 
                   sh 'ionic cordova build ios --release'
       echo "test ios"
