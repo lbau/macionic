@@ -37,6 +37,8 @@ pipeline {
             sh 'export ANDROID_HOME=/Users/Dcos/Library/Android/sdk'
             sh 'export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}:/Users/Shared/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/ionic/bin:/Users/Shared/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/cordova/bin'
             sh "echo ${PATH}"
+            sh "echo sudo su"
+            sh "echo ${PS}"
              sh 'ionic cordova build android --release'
             //sh "./node_modules/ionic/bin/ionic cordova build ios --prod --release"
                   //sh 'ionic cordova build ios --release'
