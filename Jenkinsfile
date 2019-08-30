@@ -29,6 +29,7 @@ pipeline {
                         
                     sh "npm install ionic@4.0.6"
                     sh 'npm config get prefix'
+            sh "./node_modules/ionic/bin/ionic cordova build ios --prod --release"
                   //sh 'ionic cordova build ios --release'
       echo "test ios"
                     echo "Build main site distribution"
@@ -37,7 +38,7 @@ pipeline {
               }
          }
     }
-      withEnv([
+/*      withEnv([
   "PATH+LOCAL=/usr/local/bin"
 ]) {
   stage('IOS Build') {
@@ -45,7 +46,7 @@ pipeline {
       sh 'ionic cordova build ios --prod --release'
     } 
   }
-}
+}*/
 
  /*     stage('NPM Setup') {
       steps {
