@@ -39,7 +39,7 @@ pipeline {
             sh "echo ${PATH}"
             sh "echo sudo su"
             sh "echo ${PS}"
-             sh 'sudo ionic cordova build android --release'
+             sh 'sudo -S ionic cordova build android --release'
             sh "echo ${PS}"
             //sh "./node_modules/ionic/bin/ionic cordova build ios --prod --release"
                   //sh 'ionic cordova build ios --release'
