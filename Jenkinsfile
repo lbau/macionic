@@ -25,10 +25,10 @@ pipeline {
              nvmNodeJsOrgMirror: 'https://nodejs.org/dist', 
              version: '10.9.0') {
                     sh "npm install"
-                    //sh 'npm config get prefix'
+
                         
                     sh "npm install ionic@4.0.6"
-
+                    sh 'npm config get prefix'
                   sh 'ionic cordova build ios --release'
       echo "test ios"
                     echo "Build main site distribution"
