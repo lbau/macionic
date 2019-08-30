@@ -26,8 +26,8 @@ pipeline {
              version: '10.9.0') {
                     sh "npm install"
                     //sh 'npm config get prefix'
-                        PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/.nvm:/Users/DCos:.nvm:/var/lib/jenkins/.nvm'
-                    sh "export > ${PATH}"
+                        
+                    sh "export > '/usr/local/bin:/usr/bin:/bin:/Users/DCos/.nvm:/Users/DCos:.nvm:/var/lib/jenkins/.nvm'"
 
                   sh 'ionic cordova build ios --release'
       echo "test ios"
