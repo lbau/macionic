@@ -37,7 +37,8 @@ pipeline {
             //sh 'cd ./node_modules/ionic/bin/'
             sh "echo ${PATH}"
             sh 'export ANDROID_HOME=/Users/Dcos/Library/Android/sdk'
-            sh 'export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}:/Users/Shared/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/ionic/bin:/Users/Shared/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/cordova/bin:/Users/DCos/.gradle:/Users/DCos/Documents/Jenkins/Home/workspace/macionichub_master/platforms/android'
+            sh 'export GRADLE_HOME=/Users/DCos/Documents/Jenkins/Home/workspace/macionichub_master/platforms/android'
+            sh 'export PATH=${PATH}:${GRADLE_HOME}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}:/Users/Shared/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/ionic/bin:/Users/Shared/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/cordova/bin:/Users/DCos/.gradle:/Users/DCos/Documents/Jenkins/Home/workspace/macionichub_master/platforms/android'
             sh "echo ${PATH}"
             sh "echo sudo su"
             sh "echo ${PS}"
