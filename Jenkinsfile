@@ -37,7 +37,7 @@ pipeline {
             //sh 'cd ./node_modules/ionic/bin/'
             sh "echo ${PATH}"
             sh 'export ANDROID_HOME=/Users/Dcos/Library/Android/sdk'
-            sh 'export GRADLE_HOME=/Users/DCos/Documents/Jenkins/Home/workspace/macionichub_master/platforms/android/cordova/lib/builders:/Users/kim/.node/bin:/usr/local/bin:/usr/local/sbin:~/bin:/Users/kim/Library/Android/sdk/platform-tools:/Users/kim/Library/Android/sdk/tools:/Users/kim/Library/Android/sdk/build-tools/22.0.1:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+            sh 'export GRADLE_HOME=/Users/DCos/Documents/Jenkins/Home/workspace/macionichub_master/platforms/android/cordova/lib/builders:/Users/DCos.node/bin:/usr/local/bin:/usr/local/sbin:~/bin:/Users/DCos/Library/Android/sdk/platform-tools:/Users/DCos/Library/Android/sdk/tools:/Users/DCos/Library/Android/sdk/build-tools/27.0.3:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
             sh 'export PATH=${PATH}:${GRADLE_HOME}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}:/Users/Shared/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/ionic/bin:/Users/Shared/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/cordova/bin:/Users/DCos/.gradle:/Users/DCos/Documents/Jenkins/Home/workspace/macionichub_master/platforms/android'
             sh "echo ${PATH}"
             sh "echo sudo su"
