@@ -5,7 +5,7 @@ pipeline {
          //ANDROID_HOME='/Users/DCos/Library/Android/sdk'
          //PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/.nvm:/Users/DCos:.nvm:/var/lib/jenkins/.nvm:/Users/DCos/Library/Android/sdk'
          //path de whindows
-           PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/Documents/Jenkins/:/Users/DCos/Documents/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/ionic/bin:/Users/Shared/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/cordova/bin:/Users/DCos/.gradle'
+           PATH='/usr/local/bin:/usr/bin:/bin:/Users/DCos/Documents/Jenkins/:/Users/DCos/Documents/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/ionic/bin:/Users/Shared/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/cordova/bin:/Users/DCos/.gradle:/Users/DCos/Documents/Jenkins/Home/workspace/macionichub_master/platforms/android'
          //PATH='/Users/lesba_3nkrzb1/AppData/Local/Programs/Microsoft~1/bin:%NVM_HOME%:%NVM_SYMLINK%:%windir%/system32:%HOMEDRIVE%:%HOMEPATH%'
          //PATH='/usr/local/bin:/usr/bin:/bin/ANDROID_HOME'
          //PATH='/Users/Shared/Jenkins/ANDROID_HOME'
@@ -37,7 +37,7 @@ pipeline {
             //sh 'cd ./node_modules/ionic/bin/'
             sh "echo ${PATH}"
             sh 'export ANDROID_HOME=/Users/Dcos/Library/Android/sdk'
-            sh 'export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}:/Users/Shared/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/ionic/bin:/Users/Shared/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/cordova/bin:/Users/DCos/.gradle'
+            sh 'export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}:/Users/Shared/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/ionic/bin:/Users/Shared/Jenkins/.nvm/versions/node/v10.9.0/bin/lib/node_modules/cordova/bin:/Users/DCos/.gradle:/Users/DCos/Documents/Jenkins/Home/workspace/macionichub_master/platforms/android'
             sh "echo ${PATH}"
             sh "echo sudo su"
             sh "echo ${PS}"
