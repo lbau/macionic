@@ -22,6 +22,7 @@ pipeline {
          sh "echo sudo su"
          sh "echo ${PS}"
          sh "echo nvm use 10.9.0"
+         sh 'ionic cordova build android --release'
          nvm(nvmInstallURL: 'https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh', 
              nvmIoJsOrgMirror: 'https://iojs.org/dist',
              nvmNodeJsOrgMirror: 'https://nodejs.org/dist', 
