@@ -41,8 +41,8 @@ pipeline {
             sh "echo ${PATH}"
             sh "echo sudo su"
             sh "echo ${PS}"
-            sh 'ionic cordova build ios --release'
-            sh 'cordova platform add android@6.1.2'
+            //sh 'ionic cordova build ios --release'
+            //sh 'cordova platform add android@6.1.2'
              sh 'ionic cordova build android --release'
 
             //sh "./node_modules/ionic/bin/ionic cordova build ios --prod --release"
@@ -87,7 +87,7 @@ pipeline {
    stage('IOS Build') {
    steps {
       //nvm 'use 10.9.0'
-      sh 'ionic cordova build ios --release'
+      //sh 'ionic cordova build ios --release'
       echo "test ios"
      //sh 'node --max-old-space-size=8192 ./node_modules/@ionic/app-scripts/bin/ionic-app-scripts.js build --prod && cordova build ios'
      } 
