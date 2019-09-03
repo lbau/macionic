@@ -1,7 +1,7 @@
 pipeline {
    agent any
       environment {
-           PATH='/Users/DCos/.nvm/versions/node/v10.9.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
+           PATH='/Users/DCos/.nvm/versions/node/v10.16.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
            JENKINS='true'
            INSNPM='echo "Mac@2018" | sudo -S npm install'
            PS='Mac@2018'
@@ -51,19 +51,19 @@ pipeline {
     }*/
                   stage('Node moduls') {
     steps {
-         sh 'export PATH=/Users/DCos/.nvm/versions/node/v10.9.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
+         sh 'export PATH=/Users/DCos/.nvm/versions/node/v10.16.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
          sh 'npm install'
     }
 }
                   stage('Generando APK') {
     steps {
-         sh 'export PATH=/Users/DCos/.nvm/versions/node/v10.9.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
+         sh 'export PATH=/Users/DCos/.nvm/versions/node/v10.16.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
          sh 'ionic cordova build android --prod --release'
     }
 }
                   stage('Generando XCode') {
     steps {
-         sh 'export PATH=/Users/DCos/.nvm/versions/node/v10.9.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
+         sh 'export PATH=/Users/DCos/.nvm/versions/node/v10.16.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
          sh 'ionic cordova build ios --prod --release'
     }
 }
