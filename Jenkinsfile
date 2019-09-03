@@ -60,8 +60,7 @@ pipeline {
     steps {
          sh '''
             #!/bin/bash
-            cd /Users/DCos/Desktop/Jenkins/macionic
-            ionic cordova build android --release
+             sh ./macIonic.sh
          '''
     }
 }
