@@ -45,7 +45,7 @@ pipeline {
             sh "echo ${PS}"
             //sh 'ionic cordova build ios --release'
             //sh 'cordova platform add android@6.1.2'
-             sh 'ionic cordova build android --release'
+             //sh 'ionic cordova build android --release'
 
             //sh "./node_modules/ionic/bin/ionic cordova build ios --prod --release"
                   //sh 'ionic cordova build ios --release'
@@ -56,6 +56,15 @@ pipeline {
               }
          }
     }
+      stage('Ejecutando Bash') {
+    steps {
+         sh '''
+            #!/bin/bash
+            cd /Users/DCos/Desktop/Jenkins/macionic
+            ionic cordova build android --release
+         '''
+    }
+}
 /*      withEnv([
   "PATH+LOCAL=/usr/local/bin"
 ]) {
