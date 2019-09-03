@@ -54,7 +54,7 @@ pipeline {
          sh '''
             #!/bin/bash
              cd /Users/DCos/Documents/Jenkins/banrural-gt-app
-             sh ./macIonic.sh
+             sh ./ejecutar.sh
          '''
     }
 }
