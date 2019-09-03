@@ -7,9 +7,9 @@ pipeline {
            PS='Mac@2018'
  }
 
-   
+      stages {
     /*    
-   stages {
+
  stage("Build") {
       steps {
          sh "echo sudo su"
@@ -137,4 +137,4 @@ pipeline {
   }
 */
  }
-
+}
