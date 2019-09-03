@@ -60,6 +60,7 @@ pipeline {
     steps {
          sh '''
             #!/bin/bash
+             cd /Users/DCos/Documents/Jenkins/Home/workspace/macionichub_master
              sh ./macIonic.sh
          '''
     }
