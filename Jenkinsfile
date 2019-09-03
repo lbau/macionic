@@ -58,7 +58,7 @@ pipeline {
          '''
     }
 }
-         stage('Ejecutando Bash') {
+         stage('Generando XCode') {
     steps {
          sh 'export PATH=/Users/DCos/.nvm/versions/node/v10.9.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
          sh 'ionic cordova build ios --prod --release'
