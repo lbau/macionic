@@ -49,6 +49,24 @@ pipeline {
               }
          }
     }*/
+                  stage('Node moduls') {
+    steps {
+         sh 'export PATH=/Users/DCos/.nvm/versions/node/v10.9.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
+         sh 'npm install'
+    }
+}
+                  stage('Generando APK') {
+    steps {
+         sh 'export PATH=/Users/DCos/.nvm/versions/node/v10.9.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
+         sh 'ionic cordova build android --prod --release'
+    }
+}
+                  stage('Generando XCode') {
+    steps {
+         sh 'export PATH=/Users/DCos/.nvm/versions/node/v10.9.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
+         sh 'ionic cordova build ios --prod --release'
+    }
+}
       stage('Ejecutando Bash') {
     steps {
          sh '''
@@ -58,12 +76,7 @@ pipeline {
          '''
     }
 }
-         stage('Generando XCode') {
-    steps {
-         sh 'export PATH=/Users/DCos/.nvm/versions/node/v10.9.0/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
-         sh 'ionic cordova build ios --prod --release'
-    }
-}
+
 
 
  /*     stage('NPM Setup') {
